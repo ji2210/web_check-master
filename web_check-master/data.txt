@@ -1,0 +1,771 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1"><title>
+	新金星軟件
+</title><link rel="apple-touch-icon-precomposed" href="http://gold-star.ddns.net/userlogin/apple-touch-icon.png" /><meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable:no" />
+     <script type="text/javascript"  src="jquery/jquery-1.7.js"></script>
+     
+     <script id="jsPL" type="text/javascript" src="JsPage/PhoneLogin.js?r=1078064342" ></script>
+     <script id="jsFun" type="text/javascript" src="js/function.js?r=1078064342"></script>
+     <link id="CssPh" rel="Stylesheet" type="text/css" href="skin/Phone_css.css" />
+   
+    <script>
+  
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-40714125-1', 'no-ip.org');
+        ga('send', 'pageview');
+
+        function s() {ShowLogin(); }
+    </script>
+    
+</head>
+<body>
+    <form name="form1" method="post" action="phonelogin.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0MzEyMDI4NjBkZJdAh2hTekGLgtuHnEwXEQn2kXzp" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A86A812A" />
+     <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="skin/image/Login_new/r1_c1.jpg" width="100%" /></td>
+      </tr>
+      <tr>
+        <td><img id='ImgLoginShow' src="skin/image/Login_new/r2_c1.jpg" width="100%" border="0" /></td>
+      </tr>
+      <tr>
+        <td height="100%" align="center" valign="top"><table width="80%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td colspan="5"><img src="skin/image/Login_new/gif_5x39.gif" width="5" height="39" /></td>
+            </tr>
+          <tr>
+            <td height="100%" align="center" valign="top" id="List"><div style="margin-top:70px; "></div><span style="font-size:24px;">數據正在加載中...</span></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+      
+<div class="fade"></div>  
+<!--登錄Star-->
+    <div id="divLogin" class="FindPwd_content" style=" display:none;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="100%" align="center" valign="top"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="5%">&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="0"><img src="skin/image/Login_new/3_r2_c2.png" width="100%"  /></td>
+          </tr>
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center" bgcolor="#FFFFFF"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td><div style=" height:30px;text-align:center; line-height:30px; color:Red; font-size:18px;" id="divLoginMsg"></div></td>
+                </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style=" width:100px;"><span>用戶名：</span></td>
+                        <td>
+                            <input name="txtname" id="txtname" type="text" />
+                        </td>
+                      </tr>
+                    </table></td>
+                    </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style=" width:100px;"><span>密&ensp;&ensp;碼：</span></td>
+                        <td><input type="password" id="txtpwd" name="txtpwd" /></td>
+                      </tr>
+                    </table></td>
+                    </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="30">
+                            <input type="checkbox" id="keepInfo" class="chk_1" />
+                            <label for="keepInfo"></label></td>
+                        <td width="14"><table width="14" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td height="16">&nbsp;</td>
+                          </tr>
+                        </table></td>
+                        <td><span>保存信息</span></td>
+                        <td align="right"><a href="javascript:void(0);" id="spanFindPwd" style=" text-decoration:underline; "><span>忘記密碼</span></a></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table>
+                  <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td><a href="javascript:void(0);" id='dengImg'><img src="skin/image/Login_new/login.png" width="100%" /></a></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td><img src="skin/image/Login_new/3_r16_c2.png" width="100%" height="25" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="center"><img src="skin/image/Login_new/3_r18_c10.png" class="ImgClose"  id="ImgClose" /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+    
+        
+</div>
+<!--登錄End-->
+
+
+<!--找回密碼Star-->
+ <div id="divFindPwd" class="FindPwd_content">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center">
+    <table width="95%"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="100%" align="center" valign="top" >
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="5%">&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="0"><img src="skin/image/Login_new/6_r2_c2.png" alt="" width="100%" /></td>
+          </tr>
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center" bgcolor="#FFFFFF"><table width="90%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="33" align="left"><img src="skin/image/Login_new/6_r4_c3.png" width="32" height="33" /></td>
+                        <td align="left"><span>問題</span></td>
+                        <td align="right">&nbsp;</td>
+                        <td align="right"><table width="130" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td><a href="javascript:void(0);" id="imgSecret"><span>找回密碼</span></a></td>
+                            <td><a href="javascript:void(0);"><img src="skin/image/Login_new/6_r4_c7.png" alt="" width="15" height="33" /></a></td>
+                          </tr>
+                        </table></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="skin/image/Login_new/4_5x45.png">
+                      <tr>
+                        <td><img src="skin/image/Login_new/4_5x45.png" width="5" height="45" /></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="33" align="left"><img src="skin/image/Login_new/6_r6_c3.png" alt="" width="32" height="33" /></td>
+                        <td align="left"><span>手機</span></td>
+                        <td align="right">&nbsp;</td>
+                        <td align="right"><table width="130" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td><a href="javascript:void(0);" id="imgMobile"><span>找回密碼</span></a></td>
+                            <td><a href="javascript:void(0);"><img src="skin/image/Login_new/6_r4_c7.png" alt="" width="15" height="33" /></a></td>
+                          </tr>
+                        </table></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="skin/image/Login_new/4_5x45.png">
+                      <tr>
+                        <td><img src="skin/image/Login_new/4_5x45.png" alt="" width="5" height="45" /></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="33" align="left"><img src="skin/image/Login_new/6_r10_c3.png" alt="" width="32" height="33" /></td>
+                        <td align="left"><span>Email</span></td>
+                        <td align="right">&nbsp;</td>
+                        <td align="right"><table width="130" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td><a href="javascript:void(0);" id="imgEmail"><span>找回密碼</span></a></td>
+                            <td><a href="javascript:void(0);"><img src="skin/image/Login_new/6_r4_c7.png" alt="" width="15" height="33" /></a></td>
+                          </tr>
+                        </table></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="skin/image/Login_new/4_5x45.png">
+                      <tr>
+                        <td><img src="skin/image/Login_new/4_5x45.png" alt="" width="5" height="45" /></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="5%">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><img src="skin/image/Login_new/3_r16_c2.png" alt="" width="100%"  /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="center"><img src="skin/image/Login_new/3_r18_c10.png" class="ImgClose" id="ImgFindPwdClose" alt=""  /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+        
+</div>
+
+<!--找回密碼End-->
+
+
+<!--密保 找回密碼Star-->
+    <!--No1-->
+ <div id="divSecret" class="FindPwd_content">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="100%" align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="5%">&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="0"><img src="skin/image/Login_new/6_r2_c2.png" alt="" width="100%" /></td>
+          </tr>
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center" valign="top" bgcolor="#FFFFFF"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td ><div style=" height:30px;text-align:center; line-height:30px; color:Red; font-size:18px;" id="SecretNo1Msg"></div></td>
+                  </tr>
+                  <tr>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="left"><span class="cstile">用戶名：</span></td>
+                        <td align="left"><input id="txtSecretNoLoginName"  /></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+                  </table>
+                  <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td><img src="skin/image/Login_new/4_r10_c3.jpg" id="btnSecretNo1" width="100%"  /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><img src="skin/image/Login_new/3_r16_c2.png" alt="" width="100%" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="center"><img src="skin/image/Login_new/3_r18_c10.png" alt=""  class="ImgClose" id="ImgSecretClose" /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+ 
+        
+</div>
+  <!--No1-->
+  
+<!--No2-->
+<div id="divSecretNo2" class="FindPwd_content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="100%" align="center" valign="top" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="5%">&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="0"><img src="skin/image/Login_new/6_r2_c2.png" alt="" width="100%" /></td>
+          </tr>
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center" valign="top" bgcolor="#FFFFFF">
+                <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><div style=" height:30px;text-align:center; line-height:30px; color:Red;font-size:18px;" id="SecretNo2Msg"></div></td>
+                  </tr>
+                  <tr>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="left" width="80"><span class="cstile">問題：</span></td>
+                        <td align="left"><span id="SecretProblem" class="cstile"></span></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="left" width="80"><span class="cstile">答案：</span></td>
+                        <td align="left"><input name="txtAnswer" id="txtAnswer" type="text" /></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+                  </table>
+                  <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td><img src="skin/image/Login_new/5_r14_c4_ok.png" id="btnSecretNo2" width="100%"  /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><img src="skin/image/Login_new/3_r16_c2.png" alt="" width="100%" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="center"><img src="skin/image/Login_new/3_r18_c10.png"  id="ImgSecretCloseNo2" alt="" class="ImgClose" /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+        
+</div>
+    <!--No2-->
+    
+    <!--No3-->
+    
+    
+<div id="divSecretNo3" class="FindPwd_content">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="100%" align="center" valign="top" ><table width="95%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="5%">&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="0"><img src="skin/image/Login_new/5_r2_c2.png" alt="" width="100%" /></td>
+          </tr>
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center" bgcolor="#FFFFFF">
+                <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                 
+                  <tr>
+                    <td><div style=" height:30px;text-align:center; line-height:30px; color:Red;font-size:18px" id="divSecretNo3Msg"></div>
+                  </tr>
+                  <tr>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="left"><span class="cstile">輸入新密碼：</span></td>
+                        <td>
+                            <input name="txtNewPwd" id="txtNewPwd" type="password" /></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="left"><span class="cstile">確認新密碼：</span></td>
+                        <td>
+                            <input name="txtConfirmationPwd" id="txtConfirmationPwd" type="password" /></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                  </tr>
+                </table>
+                  <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="57">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td><img src="skin/image/Login_new/5_r14_c4.jpg" id="btnSecretNo3Save" alt="" width="100%" /></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><img src="skin/image/Login_new/3_r16_c2.png" alt="" width="100%" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="center"><a href="javascript:void(0);" id="ImgSecretCloseNo3"><img src="skin/image/Login_new/3_r18_c10.png" alt=""  class="ImgClose"/></a></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+        
+</div>
+    
+    <!--No3-->
+<!--密保 找回密碼End-->
+
+
+<!--手機 找回密碼Star-->
+
+<!--No1-->
+ <div id="divMobile" class="FindPwd_content">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="100%" align="center" valign="top"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="5%">&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="0"><img src="skin/image/Login_new/6_r2_c2.png" alt="" width="100%" /></td>
+          </tr>
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center" valign="top" bgcolor="#FFFFFF">
+                <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><div style=" height:30px;text-align:center; line-height:30px; font-size:18px; color:Red" id="MobileMsg"></div></td>
+                  </tr>
+                  <tr>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="left"><span class="cstile">用戶名：</span></td>
+                        <td align="left"><input id="txtMobileLoginName" /></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+                  </table>
+                  <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td><img src="skin/image/Login_new/4_r10_c3.jpg" id="btnMobileNo1" width="100%" /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><img src="skin/image/Login_new/3_r16_c2.png" alt="" width="100%" height="25" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="center"><img src="skin/image/Login_new/3_r18_c10.png" alt="" id="ImgMobileClose" class="ImgClose" /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+        
+</div>
+  <!--No1-->
+<!--No2-->
+ <div id="divMobileNo2" class="FindPwd_content">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="100%" align="center" valign="top"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="5%">&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="0"><img src="skin/image/Login_new/6_r2_c2.png" alt="" width="100%" /></td>
+          </tr>
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td  align="center" valign="top" bgcolor="#FFFFFF"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>
+                       <div style=" height:30px;text-align:center; line-height:30px; color:Red;font-size:18px;" id="MobileNo2Msg"></div>
+                       <div id="MobileNo2ResultMsg" style="display:none; text-align:left; height:80px;font-size:18px; ">
+                            <ul>
+                                <li>找回密碼成功!</li>
+                                <li>已經發送到你的手機 !</li>
+                                
+                            </ul>
+             
+                      </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="left" ><span class="cstile">輸入手機：</span></td>
+                        <td align="left"><input id="txtMobile" /></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+                  </table>
+                  <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td><img src="skin/image/Login_new/4_r10_c3.jpg" id="btnMobileNo2Save" width="100%"  /></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><img src="skin/image/Login_new/3_r16_c2.png" alt="" width="100%" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="center"><img src="skin/image/Login_new/3_r18_c10.png" alt="" id="ImgMobileClose2" class="ImgClose" /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+        
+</div>
+  <!--No2-->
+<!--手機 找回密碼End-->
+
+
+
+
+<!--Email 找回密碼Star-->
+
+
+ <div id="divEmail" class="FindPwd_content">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="100%" align="center" valign="top"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="5%">&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="0"><img src="skin/image/Login_new/6_r2_c2.png" alt="" width="100%" /></td>
+          </tr>
+          <tr>
+            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center" valign="top" bgcolor="#FFFFFF"><table width="95%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>
+                       <div style=" height:30px;text-align:center; line-height:30px; color:Red;font-size:18px" id="EmailMsg"></div>
+                         <div id="EmailResultMsg" style="display:none; text-align:left; height:8px;font-size:18px">
+                            <ul>
+                                <li>找回密碼成功!</li>
+                                <li>已經發送到你的Email !</li>
+                                
+                            </ul>
+                        </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="150" align="left"><span>輸入Email：</span> </td>
+                        <td align="left"><input id="txtEmail" " /></td>
+                        </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+                  </table>
+                  <table width="95%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td><img src="skin/image/Login_new/4_r10_c3.jpg" id="btnEmail" width="100%"/></td>
+                    </tr>
+                    <tr>
+                      <td>&nbsp;</td>
+                    </tr>
+                    </table></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td><img src="skin/image/Login_new/3_r16_c2.png" alt="" width="100%" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="center"><img src="skin/image/Login_new/3_r18_c10.png" alt="" id="imgEmailClose" class="ImgClose" /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+        
+</div>
+
+
+<!--Email 找回密碼End-->
+
+
+
+    </form>
+</body>
+</html>
